@@ -21,11 +21,11 @@
 
     function addCard(title, description, price) {
       var card = document.querySelector('#card-bike');
-      
+
       card.content.querySelector(".title").textContent = title;
       card.content.querySelector(".description").textContent = description;
       card.content.querySelector(".price").textContent = price;
-      
+
       var newCard = document.importNode(card.content, true);
 
       document.getElementById("card-container").appendChild(newCard);
@@ -50,6 +50,22 @@
   <div id="card-container" class="columns">
   </div>
 
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <span>"Liberdade é como saborear um passeio de bicicleta sem precisar apostar corrida com ninguém. Apenas pedalar.
+        No nosso ritmo."
+      </span>
+      <p>
+        <strong>BikeShop</strong> by Francisco Barroso
+      </p>
+      <p class="redes-sociais">
+        <i class="fab fa-facebook-square"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-twitter-square"></i>
+      </p>
+    </div>
+  </footer>
+
   <template id="card-bike">
     <div class="column">
       <div class="card">
@@ -57,7 +73,8 @@
           <p class="title"></p>
           <article class="media">
             <figure class="media-left">
-              <img class="image is-128x128" src="https://imgcentauro-a.akamaihd.net/900x900/91143302/mountain-bike-caloi-atacama-aro-29-freio-hidraulico-cambio-shimano-24-marchas-img.jpg"/>
+              <img class="image is-128x128"
+                src="https://imgcentauro-a.akamaihd.net/900x900/91143302/mountain-bike-caloi-atacama-aro-29-freio-hidraulico-cambio-shimano-24-marchas-img.jpg" />
             </figure>
             <div class="column">
               <p class="description"></p>
