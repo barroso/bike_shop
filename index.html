@@ -15,8 +15,16 @@
   <script type="text/javascript">
     window.onload = function () {
       var card = document.querySelector('#card-bike');
+      
       title = card.content.querySelector(".title");
       title.textContent = "Bike Atacama";
+
+      description = card.content.querySelector(".description");
+      description.textContent = "Mountain Bike Caloi Atacama - Aro 29 - Freio Hidráulico - Câmbio Shimano - 24 Marchas";
+
+      price = card.content.querySelector(".price");
+      price.textContent = "R$ 2590,00";
+
       addCard(card);
       addCard(card);
       addCard(card);
@@ -52,6 +60,15 @@
       <div class="card">
         <div class="card-content">
           <p class="title"></p>
+          <article class="media">
+            <figure class="media-left">
+              <img class="image is-128x128" src="https://imgcentauro-a.akamaihd.net/900x900/91143302/mountain-bike-caloi-atacama-aro-29-freio-hidraulico-cambio-shimano-24-marchas-img.jpg"/>
+            </figure>
+            <div class="column">
+              <p class="description"></p>
+              <p class="price"></p>
+            </div>
+          </article>
           <footer class="card-footer">
             <div class="card-footer-item">
               <a href="#" class="button is-success">
