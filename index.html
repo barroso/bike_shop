@@ -14,12 +14,16 @@
 
   <script type="text/javascript">
     window.onload = function () {
-      addCard("Caloi Atacama", "Mountain Bike Caloi Atacama - Aro 29 - Freio Hidráulico - Câmbio Shimano - 24 Marchas", "R$ 2590,00");
-      addCard("Oggi 7.0", "Bicicleta Mtb Oggi Big Wheel 7.0 Aro 29 2019 - Preto e Azul", "R$ 2499,00");
-      addCard("Caloi Extreme", "Mountain Bike Caloi Extreme - Aro 29 - Freio a Disco - Câmbios Shimano - 21 Marchas", "R$ 1345,00");
+      addCard("first", "Caloi Atacama", "Mountain Bike Caloi Atacama - Aro 29 - Freio Hidráulico - Câmbio Shimano - 24 Marchas", "R$ 2590,00");
+      addCard("first", "Oggi 7.0", "Bicicleta Mtb Oggi Big Wheel 7.0 Aro 29 2019 - Preto e Azul", "R$ 2499,00");
+      addCard("first", "Caloi Extreme", "Mountain Bike Caloi Extreme - Aro 29 - Freio a Disco - Câmbios Shimano - 21 Marchas", "R$ 1345,00");
+      
+      addCard("second", "Speed", "Bicicleta Speed Aro 29 2019 - Preto e Azul", "R$ 4499,00");
+      addCard("second", "Caloi Kaiena", "Mountain Bike Caloi - Aro 29 - Freio a Disco - Câmbios Shimano - 21 Marchas", "R$ 1745,00");
+      addCard("second", "Caloi", "Mountain Bike Caloi - Aro 29 - Freio Hidráulico - Câmbio Shimano - 24 Marchas", "R$ 1590,00");
     }
 
-    function addCard(title, description, price) {
+    function addCard(container, title, description, price) {
       var card = document.querySelector('#card-bike');
 
       card.content.querySelector(".title").textContent = title;
@@ -28,7 +32,7 @@
 
       var newCard = document.importNode(card.content, true);
 
-      document.getElementById("card-container").appendChild(newCard);
+      document.getElementById(container).appendChild(newCard);
     }
   </script>
 </head>
@@ -47,7 +51,9 @@
     </div>
   </section>
 
-  <div id="card-container" class="columns">
+  <div id="first" class="columns card-container">
+  </div>
+  <div id="second" class="columns card-container">
   </div>
 
   <footer class="footer">
