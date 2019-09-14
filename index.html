@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Bike Shop</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+  <link rel="stylesheet" type="text/css" href="cards.css">
+
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+  <script type="text/javascript">
+    window.onload = function () {
+      var card = document.querySelector('#card-bike');
+      title = card.content.querySelector(".title");
+      title.textContent = "Bike Atacama";
+      addCard(card);
+      addCard(card);
+      addCard(card);
+    }
+
+    function addCard(card) {
+      var cardContainer = document.getElementById("card-container");
+      var newCard = document.importNode(card.content, true);
+      cardContainer.appendChild(newCard);
+    }
+  </script>
+</head>
+
+<body>
+  <section class="hero is-info">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title is-1">
+          Escolha sua bike agora mesmo :)
+        </h1>
+        <h2 class="subtitle is-3">
+          Preparamos as melhores ofertas para você <i class="fas fa-bicycle"></i>
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <div id="card-container" class="columns">
+  </div>
+
+  <template id="card-bike">
+    <div class="column">
+      <div class="card">
+        <div class="card-content">
+          <p class="title"></p>
+        </div>
+      </div>
+    </div>
+  </template>
+</body>
+
+</html>
