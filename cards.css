@@ -1,3 +1,11 @@
 #card-container {
   padding: 10px;
 }
+
+.card {
+  min-height: 337px;
+}
+
+.media {
+  min-height: 144px;
+}

@@ -14,26 +14,21 @@
 
   <script type="text/javascript">
     window.onload = function () {
-      var card = document.querySelector('#card-bike');
-      
-      title = card.content.querySelector(".title");
-      title.textContent = "Bike Atacama";
-
-      description = card.content.querySelector(".description");
-      description.textContent = "Mountain Bike Caloi Atacama - Aro 29 - Freio Hidráulico - Câmbio Shimano - 24 Marchas";
-
-      price = card.content.querySelector(".price");
-      price.textContent = "R$ 2590,00";
-
-      addCard(card);
-      addCard(card);
-      addCard(card);
+      addCard("Caloi Atacama", "Mountain Bike Caloi Atacama - Aro 29 - Freio Hidráulico - Câmbio Shimano - 24 Marchas", "R$ 2590,00");
+      addCard("Oggi 7.0", "Bicicleta Mtb Oggi Big Wheel 7.0 Aro 29 2019 - Preto e Azul", "R$ 2499,00");
+      addCard("Caloi Extreme", "Mountain Bike Caloi Extreme - Aro 29 - Freio a Disco - Câmbios Shimano - 21 Marchas", "R$ 1345,00");
     }
 
-    function addCard(card) {
-      var cardContainer = document.getElementById("card-container");
+    function addCard(title, description, price) {
+      var card = document.querySelector('#card-bike');
+      
+      card.content.querySelector(".title").textContent = title;
+      card.content.querySelector(".description").textContent = description;
+      card.content.querySelector(".price").textContent = price;
+      
       var newCard = document.importNode(card.content, true);
-      cardContainer.appendChild(newCard);
+
+      document.getElementById("card-container").appendChild(newCard);
     }
   </script>
 </head>
