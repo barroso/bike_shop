@@ -13,3 +13,6 @@ Vou utilizar o HTML Template que é um mecanismo para encapsular um conteúdo do
 <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/template">
 Referência
 </a>
+
+## Print
+<img src="https://raw.githubusercontent.com/barroso/bike_shop/master/imgs/tela_principal.png" width="880">
