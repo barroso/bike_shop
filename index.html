@@ -17,7 +17,7 @@
       addCard("first", "Caloi Atacama", "Mountain Bike Caloi Atacama - Aro 29 - Freio Hidráulico - Câmbio Shimano - 24 Marchas", "R$ 2590,00");
       addCard("first", "Oggi 7.0", "Bicicleta Mtb Oggi Big Wheel 7.0 Aro 29 2019 - Preto e Azul", "R$ 2499,00");
       addCard("first", "Caloi Extreme", "Mountain Bike Caloi Extreme - Aro 29 - Freio a Disco - Câmbios Shimano - 21 Marchas", "R$ 1345,00");
-      
+
       addCard("second", "Speed", "Bicicleta Speed Aro 29 2019 - Preto e Azul", "R$ 4499,00");
       addCard("second", "Caloi Kaiena", "Mountain Bike Caloi - Aro 29 - Freio a Disco - Câmbios Shimano - 21 Marchas", "R$ 1745,00");
       addCard("second", "Caloi", "Mountain Bike Caloi - Aro 29 - Freio Hidráulico - Câmbio Shimano - 24 Marchas", "R$ 1590,00");
@@ -33,6 +33,14 @@
       var newCard = document.importNode(card.content, true);
 
       document.getElementById(container).appendChild(newCard);
+    }
+
+    function checkoutOpen() {
+      document.getElementById("checkout").classList.add('is-active');
+    }
+
+    function checkoutClose() {
+      document.getElementById("checkout").classList.remove('is-active');
     }
   </script>
 </head>
@@ -72,6 +80,27 @@
     </div>
   </footer>
 
+  <div id="checkout" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Hora da Compra, parabéns :)</p>
+        <button class="delete" aria-label="close" onclick="checkoutClose()"></button>
+      </header>
+      <section class="modal-card-body">
+        <p>Opa, que escolha bacana, vamos preparar sua <i class="fas fa-bicycle"></i> agora...</p>
+        <figure class="media-left">
+          <img class="image is-128x128"
+            src="https://imgcentauro-a.akamaihd.net/900x900/91143302/mountain-bike-caloi-atacama-aro-29-freio-hidraulico-cambio-shimano-24-marchas-img.jpg" />
+        </figure>
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button is-success" onclick="checkoutClose()">Confirmar</button>
+        <button class="button" onclick="checkoutClose()">Cancelar</button>
+      </footer>
+    </div>
+  </div>
+
   <template id="card-bike">
     <div class="column">
       <div class="card">
@@ -99,8 +128,8 @@
               </a>
             </div>
             <div class="card-footer-item">
-              <a href="#" class="button is-info">
-                <i class="fa fa-retweet"></i>
+              <a href="#" class="button is-info" onclick="checkoutOpen()">
+                <i class="fa fa-money-check-alt"></i>
               </a>
             </div>
           </footer>
